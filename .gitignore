@@ -1,3 +1,5 @@
 .dep/
 .obj/
 bin/
+.color_coded
+.ycm_extra_conf.py
