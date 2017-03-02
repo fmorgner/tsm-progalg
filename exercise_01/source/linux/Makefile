@@ -13,7 +13,7 @@ $(shell mkdir -p $(OBJDIR) >/dev/null)
 $(shell mkdir -p $(BINDIR) >/dev/null)
 
 DEPFLAGS=-MT $@ -MMD -MP -MF $(DEPDIR)/$*.Td
-CXXFLAGS=$(CXXSTDV) -Wall -Wextra -pedantic -Iinc
+CXXFLAGS=$(CXXSTDV) -fopenmp -Wall -Wextra -pedantic -Iinc
 CCOMMAND=$(CXX) $(DEPFLAGS) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
 PCOMMAND=mv -f $(DEPDIR)/$*.Td $(DEPDIR)/$*.d
 
